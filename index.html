@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Inter:wght@400;700&family=Lora:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/1901e5de99.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css" >
+  <script defer src="script.js"></script>
+  <title>Dictionary</title>
+</head>
+<body id="body" class="theme--dark">
+  <header class="header">
+    <a class="header--title" href="/" >
+      <i class="fa-solid fa-book"></i>
+    </a>
+    <div class="header--container">
+      <div class="select">
+        <select id="font-select">
+          <option style="font-family: Inter, sans-serif;" value="sans-serif">Sans Serif</option>
+          <option style="font-family: Lora, serif;"  value="serif">Serif</option>
+          <option style="font-family: Inconsolata, monospace;" value="mono">Mono</option>
+        </select>
+      </div>
+      <div class="horizontal-rule"></div>
+      <div class="toggle">
+        <input type="checkbox" id="toggle--theme" class="hidden toggle--theme" />
+        <label class="toggle--slider" for="toggle--theme"></label>
+        <label id="theme--label" class="toggle--label" for="toggle--theme">
+          <i class="fa-regular fa-moon"></i>
+        </label>
+      </div>
+    </div>
+  </header>
+
+  <main  class="main">
+    <input autofocus placeholder="Search for any word..." type="text" id="search-word" class="search-bar" >
+    <section id="word-info">
+      <div id="loader" class="hidden loader"></div>
+      <section id="word-title" class="hidden keyword">
+        <h1 id="word-word" class="keyword-word"></h1>
+        <p id="word-pronunciation" class="keyword-pronunciation-text"></p>
+        <figure class="keyword-audio">
+          <audio id="word-audio"></audio>
+          <button id="word-audio-btn" class="keyword-audio-btn">
+            <i class="fa-solid fa-headphones"></i>
+          </button>
+        </figure>
+      </section>
+      <section id="word-defintions">
+
+      </section>
+    </section>
+  </main>
+</body>
+</html>
